@@ -16,7 +16,8 @@ def home(request):
         from django.core.validators import validate_email
         from django.core.exceptions import ValidationError
         try:
-            email = validate_email( request.POST['email'] )
+            if validate_email( request.POST['email'] ) is None:
+                email = request.POST['email']
         except (ValidationError, KeyError):
             errors.append('How can we contact you? You forgot to give us an email ...')
             email = ''
@@ -52,6 +53,7 @@ def home(request):
 
             sign_up = SignUp(
                 name = name,
+                email = email,
                 act_name = act_name,
                 act_description = act_description,
                 act_requests = act_requests
