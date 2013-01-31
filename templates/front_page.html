@@ -1,0 +1,135 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Furnald Open Mike Night</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="{% static "css/libraries/bootstrap/bootstrap.min.css" %}" rel="stylesheet" media="screen">
+    <link href="{% static "css/carton.css" %}" rel="stylesheet" media="screen">
+    <link href="{% static "css/architects-daughter.css" %}" rel="stylesheet" media="screen">
+    <link href="{% static "css/bebas-neue.css" %}" rel="stylesheet" media="screen">
+    <link href="{% static "css/front_page.css" %}" rel="stylesheet" media="screen">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="container-narrow">
+
+        <div class="masthead">
+            <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#" class="coloured">Home</a></li>
+                <li><a href="#" class="coloured">Sign Up</a></li>
+            </ul>
+            <h3 class="muted">Furnald RHLO Presents</h3>
+        </div>
+
+        <div class="jumbotron coloured">
+            <p>Open Mic Night</p>
+        </div>
+
+        <hr>
+
+        <div class="row-fluid marketing">
+
+            <div class="span4">
+                <h2 class="coloured">Details</h2>
+            </div>
+
+            <div class="span8">
+                <h4 class="coloured">Where?</h4>
+                <p>Furnald Lounge in Furnald Hall</p>
+
+                <h4 class="coloured">When?</h4>
+                <p>Feburary 22nd 2013 starting at 9:00 PM</p>
+
+                <h4 class="coloured">What?</h4>
+                <p>You, and all of the other Columbia students have a chance to show all of us your skills. You can get up on stage and do absolutley anything. If you can burp the alphabet, sing better than Adele, form a band in record breaking time, tell jokes that can insult and cause laughs, practice some ventroliquism, then we need you to perform. The spirit of the open mike, of course, is to give anyone a chance to perform. If you don't think you have anything to share, just turn up and watch. It’s weird. Be okay with it being weird. You should totally come.</p>
+
+                <h4 class="coloured">Why?</h4>
+                <p>Because it's awesome and you can! Come around and support your friends and fellow Columbians.</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="row-fluid signup">
+
+            <h1 class="coloured">Sign Up!</h1>
+
+            <p>Ready to tell us about your awesome fantastic talent that you want showcase during the Open Mike Night</p>
+
+            <form class="form-horizontal" method="post">
+                <div class="control-group">
+                    <label class="control-label coloured" for="settings-name">Name</label>
+                    <div class="controls">
+                        <input type="text" id="settings-name" placeholder="Name"  class="input-xxlarge">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label coloured" for="settings-email">Email</label>
+                    <div class="controls">
+                        <input type="text" id="settings-email" placeholder="Email"  class="input-xxlarge">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label coloured" for="settings-act-name">Act Name</label>
+                    <div class="controls">
+                        <input type="text" id="settings-act-name" placeholder="Be Extravagant"  class="input-xxlarge">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label coloured" for="settings-act-description">Act Description</label>
+                    <div class="controls">
+                        <textarea class="input-xxlarge" id="settings-act-description" placeholder="Tell Us About Your Act"></textarea>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label coloured" for="settings-act-requests">Special Requests</label>
+                    <div class="controls">
+                        <textarea class="input-xxlarge" id="settings-act-requests" placeholder="Needing something special. Tell us about it"></textarea>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="controls">
+                        <button type="submit" class="btn btn-large">Sign in</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+
+        <div class="footer-callout coloured">
+            <p> We bring the mic, You bring the talent</p>
+        </div>
+
+        <div class="footer">
+            <p>© Aramael Pe&ntilde;a-Alc&aacute;ntara 2012</p>
+        </div>
+
+    </div>
+
+</div> <!-- /container -->
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+<script src="{% static "js/libraries/bootstrap/bootstrap.min.js" %}"></script>
+<script src="{% static "js/front_page.js" %}"></script>
+
+</body>
+</html>
