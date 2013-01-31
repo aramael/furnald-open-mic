@@ -71,40 +71,60 @@
 
             <p>Ready to tell us about your awesome fantastic talent that you want showcase during the Open Mike Night</p>
 
+            {% if success %}
+                <div class="alert alert-success">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <h4>Great!</h4>
+                    We have received your sign up, and you'll be hearing from us with more details.
+                </div>
+            {% endif %}
+            {% if errors %}
+                <div class="alert alert-error">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    <h4>Double check some stuff below.</h4>
+                    <ul>
+                        {% for error in errors %}
+                            <li>{{ error }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+
             <form class="form-horizontal" method="post">
+                {% csrf_token %}
                 <div class="control-group">
-                    <label class="control-label coloured" for="settings-name">Name</label>
+                    <label class="control-label coloured" for="name">Name</label>
                     <div class="controls">
-                        <input type="text" id="settings-name" placeholder="Name"  class="input-xxlarge">
+                        <input type="text" id="name" placeholder="Name"  class="input-xxlarge" value="{{ request.POST.name }}" name="name">
                     </div>
                 </div>
                 <div class="control-group">
-                    <label class="control-label coloured" for="settings-email">Email</label>
+                    <label class="control-label coloured" for="email">Email</label>
                     <div class="controls">
-                        <input type="text" id="settings-email" placeholder="Email"  class="input-xxlarge">
+                        <input type="text" id="email" placeholder="Email"  class="input-xxlarge" name="email">
                     </div>
                 </div>
                 <div class="control-group">
-                    <label class="control-label coloured" for="settings-act-name">Act Name</label>
+                    <label class="control-label coloured" for="act-name">Act Name</label>
                     <div class="controls">
-                        <input type="text" id="settings-act-name" placeholder="Be Extravagant"  class="input-xxlarge">
+                        <input type="text" id="act-name" placeholder="Be Extravagant"  class="input-xxlarge" name="act-name">
                     </div>
                 </div>
                 <div class="control-group">
-                    <label class="control-label coloured" for="settings-act-description">Act Description</label>
+                    <label class="control-label coloured" for="act-description">Act Description</label>
                     <div class="controls">
-                        <textarea class="input-xxlarge" id="settings-act-description" placeholder="Tell Us About Your Act"></textarea>
+                        <textarea class="input-xxlarge" id="act-description" placeholder="Tell Us About Your Act" name="act-description"></textarea>
                     </div>
                 </div>
                 <div class="control-group">
-                    <label class="control-label coloured" for="settings-act-requests">Special Requests</label>
+                    <label class="control-label coloured" for="act-requests">Special Requests</label>
                     <div class="controls">
-                        <textarea class="input-xxlarge" id="settings-act-requests" placeholder="Needing something special. Tell us about it"></textarea>
+                        <textarea class="input-xxlarge" id="act-requests" placeholder="Needing something special. Tell us about it" name="act-requests"></textarea>
                     </div>
                 </div>
                 <div class="control-group">
                     <div class="controls">
-                        <button type="submit" class="btn btn-large">Sign in</button>
+                        <input type="submit" class="btn btn-large" name="Submit!">
                     </div>
                 </div>
             </form>
