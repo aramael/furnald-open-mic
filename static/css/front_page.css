@@ -1,0 +1,47 @@
+
+body {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    font-family: 'Carton', helvetica, arial;
+}
+
+/* Custom container */
+.container-narrow {
+    margin: 0 auto;
+    max-width: 700px;
+}
+.container-narrow > hr {
+    margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+    background: url('http://127.0.0.1:8000/static/img/jumbotron-colour.svg') no-repeat;
+    background-position:center;
+    height: 552px;
+    margin: 0 0 60px 0;
+    text-align: center;
+}
+.jumbotron p {
+    text-indent: -999em;
+    font-size: 72px;
+    line-height: 1;
+}
+
+/* Supporting marketing content */
+.marketing {
+    margin: 60px 0;
+}
+.marketing p + h4 {
+    margin-top: 28px;
+}
+.nav .active .coloured {
+    color: #ffffff !important;
+}
+.nav :not(.active) .coloured {
+    background: none !important;
+}
+
+p {
+    font-family: helvetica,arial;
+}
