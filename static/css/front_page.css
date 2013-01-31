@@ -38,10 +38,70 @@ body {
 .nav .active .coloured {
     color: #ffffff !important;
 }
-.nav :not(.active) .coloured {
+.nav :not(.active) .coloured,
+h4.coloured,
+h2.coloured,
+h3.coloured {
     background: none !important;
 }
 
 p {
     font-family: helvetica,arial;
+}
+
+/* Sign-Up for Open Mike Night */
+
+div#signup {
+    background: transparent url("../img/paper.jpg") 0 0 no-repeat;
+    width: 528px;
+    height: 800px;
+    display: block;
+    padding: 71px 78px 0px 84px;
+    margin-left: -40px;
+    font-family: helvetica,arial;
+}
+
+div#signup h3 {
+    font: normal 80px/80px BebasNeueRegular, Helvetica, Arial, serif;
+    text-align: center;
+}
+
+div#signup table {
+    width: 528px;
+    border-collapse: collapse;
+}
+
+div#signup td {
+    width: 254px;
+}
+
+div#signup td.spacer {
+    width: auto;
+}
+
+div#signup input,
+#signup textarea{
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    display: block;
+    background: transparent;
+    border: 0px;
+    border-bottom: 2px solid #333;
+    font: normal 14px/14px 'ArchitectsDaughterRegular', Georgia, Times, serif;
+    color: #666;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+#signup textarea {
+    width: 508px;
+    padding: 10px;
+    height: 75px;
+    line-height: 20px;
+    border: 0px;
+    border-top: 2px solid #333;
+}
+.space-below label{
+    margin-top: 15px;
 }

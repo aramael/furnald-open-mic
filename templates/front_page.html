@@ -10,6 +10,9 @@
 
     <!-- Le styles -->
     <link href="{% static "css/libraries/bootstrap/bootstrap.min.css" %}" rel="stylesheet" media="screen">
+    <link href="{% static "css/carton.css" %}" rel="stylesheet" media="screen">
+    <link href="{% static "css/architects-daughter.css" %}" rel="stylesheet" media="screen">
+    <link href="{% static "css/bebas-neue.css" %}" rel="stylesheet" media="screen">
     <link href="{% static "css/front_page.css" %}" rel="stylesheet" media="screen">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -42,25 +45,77 @@
         <div class="row-fluid marketing">
 
             <div class="span4">
-                <h2>Details</h2>
+                <h2 class="coloured">Details</h2>
             </div>
 
             <div class="span8">
-                <h4>Where?</h4>
+                <h4 class="coloured">Where?</h4>
                 <p>Furnald Lounge in Furnald Hall</p>
 
-                <h4>When?</h4>
+                <h4 class="coloured">When?</h4>
                 <p>Feburary 22nd 2013 starting at 9:00 PM</p>
 
-                <h4>What?</h4>
+                <h4 class="coloured">What?</h4>
                 <p>You, and all of the other Columbia students have a chance to show all of us your skills. You can get up on stage and do absolutley anything. If you can burp the alphabet, sing better than Adele, form a band in record breaking time, tell jokes that can insult and cause laughs, practice some ventroliquism, then we need you to perform. The spirit of the open mike, of course, is to give anyone a chance to perform. If you don't think you have anything to share, just turn up and watch. It’s weird. Be okay with it being weird. You should totally come.</p>
 
-                <h4>Why?</h4>
+                <h4 class="coloured">Why?</h4>
                 <p>Because it's awesome and you can! Come around and support your friends and fellow Columbians.</p>
             </div>
         </div>
 
         <hr>
+
+        <div class="row-fluid marketing">
+            <div id="signup">
+                <h3 class="coloured">Team Signup</h3>
+
+                <ul>
+                    <li>Each participating company can submit two teams to the tournament.</li>
+                    <li>Teams should be at least 10 players, but not more than 12.</li>
+                    <li>Each team must have at least one female player.</li>
+                </ul>
+
+                <form action="/new#signup-start" method="POST">
+
+                    <table>
+                        <tbody><tr>
+                            <td>
+                                <input type="text" name="company-name" value="">
+                                <label for="company-name">Act Name<span class="req">*</span></label>
+                            </td>
+                            <td class="spacer">&nbsp;</td>
+                            <td>
+                                <input type="text" name="company-twitter" value="">
+                                <label for="company-twitter">Your Name</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <input type="text" name="contact-email" value="">
+                                <label for="contact-email">Email <span class="req">*</span> (so we can contact you to coordinate everything)</label>
+                            </td>
+
+                        </tr>
+                        <tr class="space-below">
+                            <td colspan="3">
+                                <label for="team-image">Describe Your Act</label>
+                                <textarea></textarea>
+                            </td>
+                        </tr>
+                        <tr class="space-below">
+                            <td colspan="3">
+                                <label for="team-image">Any Special Requests</label>
+                                <textarea></textarea>
+                            </td>
+                        </tr>
+                        </tbody></table>
+
+                    <div class="pledge js-pledge"><span class="js-checkbox unchecked"></span>
+                    <button id="submit-team" type="submit" disabled="">Signup Team</button>
+
+                </form>
+            </div>
+        </div>
 
         <div class="footer">
             <p>© Company 2012</p>
