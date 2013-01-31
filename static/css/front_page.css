@@ -22,10 +22,20 @@ body {
     margin: 0 0 60px 0;
     text-align: center;
 }
-.jumbotron p {
+.jumbotron p,
+.footer-callout p {
     text-indent: -999em;
     font-size: 72px;
     line-height: 1;
+}
+
+/* bottom footer */
+.footer-callout {
+    background: url('http://127.0.0.1:8000/static/img/footer-colour.svg') no-repeat;
+    background-position:center;
+    height: 250px;
+    margin: 0 0 60px 0;
+    text-align: center;
 }
 
 /* Supporting marketing content */
@@ -41,7 +51,9 @@ body {
 .nav :not(.active) .coloured,
 h4.coloured,
 h2.coloured,
-h3.coloured {
+h1.coloured,
+h3.coloured,
+label.coloured {
     background: none !important;
 }
 
@@ -50,58 +62,16 @@ p {
 }
 
 /* Sign-Up for Open Mike Night */
-
-div#signup {
-    background: transparent url("../img/paper.jpg") 0 0 no-repeat;
-    width: 528px;
-    height: 800px;
-    display: block;
-    padding: 71px 78px 0px 84px;
-    margin-left: -40px;
-    font-family: helvetica,arial;
-}
-
-div#signup h3 {
-    font: normal 80px/80px BebasNeueRegular, Helvetica, Arial, serif;
+h1.coloured {
     text-align: center;
+    height: 45px;
+    margin: 15px auto;
+    font-size: 75px;
 }
-
-div#signup table {
-    width: 528px;
-    border-collapse: collapse;
-}
-
-div#signup td {
-    width: 254px;
-}
-
-div#signup td.spacer {
-    width: auto;
-}
-
-div#signup input,
-#signup textarea{
-    width: 100%;
-    padding: 0px;
-    margin: 0px;
-    display: block;
-    background: transparent;
-    border: 0px;
-    border-bottom: 2px solid #333;
-    font: normal 14px/14px 'ArchitectsDaughterRegular', Georgia, Times, serif;
-    color: #666;
-    border-radius: 0;
-    box-shadow: none;
-}
-
-#signup textarea {
-    width: 508px;
-    padding: 10px;
+textarea {
     height: 75px;
-    line-height: 20px;
-    border: 0px;
-    border-top: 2px solid #333;
 }
-.space-below label{
-    margin-top: 15px;
+
+.signup p {
+    text-align: center;
 }

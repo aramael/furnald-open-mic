@@ -65,60 +65,58 @@
 
         <hr>
 
-        <div class="row-fluid marketing">
-            <div id="signup">
-                <h3 class="coloured">Team Signup</h3>
+        <div class="row-fluid signup">
 
-                <ul>
-                    <li>Each participating company can submit two teams to the tournament.</li>
-                    <li>Teams should be at least 10 players, but not more than 12.</li>
-                    <li>Each team must have at least one female player.</li>
-                </ul>
+            <h1 class="coloured">Sign Up!</h1>
 
-                <form action="/new#signup-start" method="POST">
+            <p>Ready to tell us about your awesome fantastic talent that you want showcase during the Open Mike Night</p>
 
-                    <table>
-                        <tbody><tr>
-                            <td>
-                                <input type="text" name="company-name" value="">
-                                <label for="company-name">Act Name<span class="req">*</span></label>
-                            </td>
-                            <td class="spacer">&nbsp;</td>
-                            <td>
-                                <input type="text" name="company-twitter" value="">
-                                <label for="company-twitter">Your Name</label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="3">
-                                <input type="text" name="contact-email" value="">
-                                <label for="contact-email">Email <span class="req">*</span> (so we can contact you to coordinate everything)</label>
-                            </td>
+            <form class="form-horizontal" method="post">
+                <div class="control-group">
+                    <label class="control-label coloured" for="settings-name">Name</label>
+                    <div class="controls">
+                        <input type="text" id="settings-name" placeholder="Name"  class="input-xxlarge">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label coloured" for="settings-email">Email</label>
+                    <div class="controls">
+                        <input type="text" id="settings-email" placeholder="Email"  class="input-xxlarge">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label coloured" for="settings-act-name">Act Name</label>
+                    <div class="controls">
+                        <input type="text" id="settings-act-name" placeholder="Be Extravagant"  class="input-xxlarge">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label coloured" for="settings-act-description">Act Description</label>
+                    <div class="controls">
+                        <textarea class="input-xxlarge" id="settings-act-description" placeholder="Tell Us About Your Act"></textarea>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label coloured" for="settings-act-requests">Special Requests</label>
+                    <div class="controls">
+                        <textarea class="input-xxlarge" id="settings-act-requests" placeholder="Needing something special. Tell us about it"></textarea>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="controls">
+                        <button type="submit" class="btn btn-large">Sign in</button>
+                    </div>
+                </div>
+            </form>
 
-                        </tr>
-                        <tr class="space-below">
-                            <td colspan="3">
-                                <label for="team-image">Describe Your Act</label>
-                                <textarea></textarea>
-                            </td>
-                        </tr>
-                        <tr class="space-below">
-                            <td colspan="3">
-                                <label for="team-image">Any Special Requests</label>
-                                <textarea></textarea>
-                            </td>
-                        </tr>
-                        </tbody></table>
+        </div>
 
-                    <div class="pledge js-pledge"><span class="js-checkbox unchecked"></span>
-                    <button id="submit-team" type="submit" disabled="">Signup Team</button>
-
-                </form>
-            </div>
+        <div class="footer-callout coloured">
+            <p> We bring the mic, You bring the talent</p>
         </div>
 
         <div class="footer">
-            <p>© Company 2012</p>
+            <p>© Aramael Pe&ntilde;a-Alc&aacute;ntara 2012</p>
         </div>
 
     </div>
