@@ -65,7 +65,7 @@
 
         <hr>
 
-        <div class="row-fluid signup">
+        <div id="signup" class="row-fluid signup">
 
             <h1 class="coloured">Sign Up!</h1>
 
@@ -90,36 +90,36 @@
                 </div>
             {% endif %}
 
-            <form class="form-horizontal" method="post">
+            <form class="form-horizontal" method="post" action="#signup">
                 {% csrf_token %}
                 <div class="control-group">
                     <label class="control-label coloured" for="name">Name</label>
                     <div class="controls">
-                        <input type="text" id="name" placeholder="Name"  class="input-xxlarge" value="{{ request.POST.name }}" name="name">
+                        <input type="text" id="name" placeholder="Name"  class="input-xxlarge" value="{{ name }}" name="name">
                     </div>
                 </div>
                 <div class="control-group">
                     <label class="control-label coloured" for="email">Email</label>
                     <div class="controls">
-                        <input type="text" id="email" placeholder="Email"  class="input-xxlarge" name="email">
+                        <input type="text" id="email" placeholder="Email"  class="input-xxlarge" name="email" value="{{ email }}">
                     </div>
                 </div>
                 <div class="control-group">
                     <label class="control-label coloured" for="act-name">Act Name</label>
                     <div class="controls">
-                        <input type="text" id="act-name" placeholder="Be Extravagant"  class="input-xxlarge" name="act-name">
+                        <input type="text" id="act-name" placeholder="Be Extravagant"  class="input-xxlarge" name="act-name" value="{{ act_name }}">
                     </div>
                 </div>
                 <div class="control-group">
                     <label class="control-label coloured" for="act-description">Act Description</label>
                     <div class="controls">
-                        <textarea class="input-xxlarge" id="act-description" placeholder="Tell Us About Your Act" name="act-description"></textarea>
+                        <textarea class="input-xxlarge" id="act-description" placeholder="Tell Us About Your Act" name="act-description">{{ act_description }}</textarea>
                     </div>
                 </div>
                 <div class="control-group">
                     <label class="control-label coloured" for="act-requests">Special Requests</label>
                     <div class="controls">
-                        <textarea class="input-xxlarge" id="act-requests" placeholder="Needing something special. Tell us about it" name="act-requests"></textarea>
+                        <textarea class="input-xxlarge" id="act-requests" placeholder="Needing something special. Tell us about it" name="act-requests">{{ act_requests }}</textarea>
                     </div>
                 </div>
                 <div class="control-group">
