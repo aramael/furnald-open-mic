@@ -16,7 +16,7 @@ body {
 
 /* Main marketing message and sign up button */
 .jumbotron {
-    background: url('http://127.0.0.1:8000/static/img/jumbotron-colour.svg') no-repeat;
+    background: url('../img/jumbotron-colour.svg') no-repeat;
     background-position:center;
     height: 552px;
     margin: 0 0 60px 0;
@@ -31,7 +31,7 @@ body {
 
 /* bottom footer */
 .footer-callout {
-    background: url('http://127.0.0.1:8000/static/img/footer-colour.svg') no-repeat;
+    background: url('../img/footer-colour.svg') no-repeat;
     background-position:center;
     height: 250px;
     margin: 0 0 60px 0;
