@@ -18,9 +18,9 @@ $(document).ready(function(){
 
         $('.coloured').animate( { backgroundColor: hue, color: hue }, time);
 
-//        timeout = setTimeout( function(){
-//            spectrum();
-//        }, time);
+        timeout = setTimeout( function(){
+            spectrum();
+        }, time);
 
     }
 
