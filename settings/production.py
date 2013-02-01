@@ -66,7 +66,7 @@ STATICFILES_DIRS = (
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 
 # Your Amazon Web Services storage bucket name, as a string.
-AWS_STORAGE_BUCKET_NAME = 'FurnaldOpenMikeNight'
+AWS_STORAGE_BUCKET_NAME = 'furnaldopenmikenight'
 
 # Your Amazon Web Services access key, as a string.
 # Set it by issuing following command
