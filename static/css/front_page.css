@@ -64,9 +64,9 @@ p {
 /* Sign-Up for Open Mike Night */
 h1.coloured {
     text-align: center;
-    height: 45px;
     margin: 15px auto;
     font-size: 75px;
+    line-height: 80px;
 }
 textarea {
     height: 75px;
