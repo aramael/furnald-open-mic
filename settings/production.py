@@ -9,7 +9,11 @@ SETTINGS_DIR, filename = os.path.split(os.path.abspath(__file__))
 SITE_ROOT = os.path.dirname( SETTINGS_DIR )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '^27$&amp;*b*2_v_427$755&amp;-lhg=1^r+nlv54@+7cwv-gyj)jnasu'
+# Set it by issuing following command
+# <code>
+# heroku config:add SECRET_KEY=''
+# </code>
+SECRET_KEY = os.environ['SECRET_KEY']
 
 DEBUG = False
 TEMPLATE_DEBUG = DEBUG
