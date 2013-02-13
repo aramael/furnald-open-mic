@@ -75,3 +75,9 @@ def home(request):
             })
 
     return render(request,'front_page.html', context)
+
+def share( request ):
+
+    context = {}
+
+    return render(request,'share_center.html', context)

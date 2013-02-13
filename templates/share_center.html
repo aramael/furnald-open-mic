@@ -1,0 +1,196 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <title>Furnald Open Mike Night</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="{% static "css/libraries/bootstrap/bootstrap.min.css" %}" rel="stylesheet" media="screen">
+    <link href="{% static "css/carton.css" %}" rel="stylesheet" media="screen">
+    <link href="{% static "css/front_page.css" %}" rel="stylesheet" media="screen">
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="container-narrow">
+
+        <div class="masthead">
+            <ul class="nav nav-pills pull-right">
+                <li class="active"><a href="#" class="coloured">Home</a></li>
+                <li><a href="#" class="coloured">Sign Up</a></li>
+            </ul>
+            <h3 class="muted">Furnald RHLO Presents</h3>
+        </div>
+
+        <div id="signup" class="row-fluid signup">
+            <h1 class="coloured">Share Open Mic Night!</h1>
+
+            <p>Hey <strong>RHLO</strong>, Furnald Open Mic Night is coming up and we need to keep advertising to make sure people come to our event. We need you to help share this event, and get people to come. This event will be fabulous and our goal is to start a buzz around campus as early as possible. We would love if you would keep posting links to the Open Mic Website. If you know anybody who has amazing talent, reach out to them and see if they want to participate. We want you to tweet #FurnaldMicNight, link to us on facebook. Post links on each others walls, tell every group you're a part of about this event. Remember to recommend it to your friends, post aobut it on facebook, and help us "sell out" the show.</p>
+
+            <p>Now we'd love love to see how many people are clicking on different links, and you can helps us out by using the form below to create a link for it and share the love!</p>
+
+            <script language="javascript" type="text/javascript">
+                function createURL() {
+                    var form = document.ctm;
+                    var myurl = ""
+                    if (!form){
+                        return;
+                    }
+                    if (!form.utm_source.value || form.utm_source.value == "") {
+                        alert("Required Source Missing!");
+                        form.utm_source.focus();
+                        return -1;
+                    }
+
+                    myurl = "http://openmic.furnald.info/?";
+
+                    switch (form.utm_source.value){
+                        case 'email':
+                            utm_medium = 'newsletter';
+                            break;
+
+                        case 'facebook':
+                            utm_medium = 'fb_link_click';
+                            break;
+
+                        case 'twitter':
+                            utm_medium = 'twitter_link_click';
+                            break;
+
+                        case 'tumblr':
+                            utm_medium = 'tumblr_link_click';
+                            break;
+
+                        case 'pinterest':
+                            utm_medium = 'pinterest_link_click';
+                            break;
+
+                        case 'reddit':
+                            utm_medium = 'reddit_link_click';
+                            break;
+
+                        default:
+                            alert("Required Campaign Missing!");
+                            form.utm_source.focus();
+                            return -1;
+                    }
+
+                    if (form.utm_source.value && form.utm_source.value != "") {
+                        myurl += "utm_source="+removeSpaces(form.utm_source.value);
+                    }
+                    if (utm_medium && utm_medium != "") {
+                        myurl += "&utm_medium="+removeSpaces(utm_medium);
+                    }
+                    if (form.utm_content.value && form.utm_content.value !="") {
+                        myurl +="&utm_content="+removeSpaces(form.utm_content.value);
+                    }
+
+                    utm_campaign = 'open_mic_night';
+                    if (utm_campaign && utm_campaign != "") {
+                        myurl += "&utm_campaign="+removeSpaces(utm_campaign);
+                    }
+                    form.result.value = myurl;
+                    return 0;
+                }
+                function clearURL() {
+                    var form = document.ctm;
+                    if (!form){
+                        return;
+                    }
+                    form.utm_source.value = "";
+                    form.utm_campaign.value = "";
+                    form.result.value = "";
+                    return 0;
+                }
+                function removeSpaces(value) {
+                    if(value.indexOf(' ')>0){
+                        value = value.split(' ').join('+');
+                    }
+                    return encodeURIComponent(value);
+                }
+            </script>
+
+            <form name="ctm" class="form-horizontal" onsubmit="createURL(); return false;">
+                {% csrf_token %}
+                <div class="control-group">
+                    <label class="control-label coloured" for="utm_source">What site are you posting this on?</label>
+                    <div class="controls">
+                        <select name="utm_source" id="utm_source">
+                            <option value="">Select One</option>
+                            <option value="email">Email</option>
+                            <option value="facebook">Facebook</option>
+                            <option value="twitter">Twitter</option>
+                            <option value="tumblr">Tumblr</option>
+                            <option value="pinterest">Pinterest</option>
+                            <option value="reddit">Reddit</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label coloured" for="utm_content">Where are you posting it?</label>
+                    <div class="controls">
+                        <input type="text" id="utm_content" class="input-xxlarge" name="utm_campaign" placeholder="Class of 2016 Group">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <div class="controls">
+                        <input type="submit" class="btn btn-large btn-primary" value="Generate URL!">
+                        <input type="submit" class="btn btn-large" value="Clear URL" onclick="clearURL();" >
+                    </div>
+                </div>
+                <div>
+                    <h3 class="coloured" style="text-align: center;">Share This Link! <input name="result" size="70" class="result" type="text" style="margin:0 auto;"></h3>
+
+                </div>
+            </form>
+
+        </div>
+
+        <div class="footer-callout coloured">
+            <p> We bring the mic, You bring the talent</p>
+        </div>
+
+        <div class="footer">
+            <p>© Aramael Pe&ntilde;a-Alc&aacute;ntara 2012</p>
+        </div>
+
+    </div>
+
+</div> <!-- /container -->
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+<script src="{% static "js/libraries/bootstrap/bootstrap.min.js" %}"></script>
+<script src="{% static "js/front_page.js" %}"></script>
+{##}
+{#<script type="text/javascript">#}
+{##}
+{#    var _gaq = _gaq || [];#}
+{#    _gaq.push(['_setAccount', 'UA-7018181-9']);#}
+{#    _gaq.push(['_trackPageview']);#}
+{##}
+{#    (function() {#}
+{#        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;#}
+{#        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';#}
+{#        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);#}
+{#    })();#}
+{##}
+{#</script>#}
+
+</body>
+</html>
